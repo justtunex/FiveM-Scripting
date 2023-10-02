@@ -1,0 +1,11 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    position: absolute;
+    width: 120rem;
+    height: 67.5rem;
+    background-color: black;
+}
