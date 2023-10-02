@@ -9,3 +9,10 @@
     height: 67.5rem;
     background-color: black;
 }
+
+.topcontent {
+    width: 116rem;
+    height: 4.8125rem;
+    flex-shrink: 0;
+    background-color: red;
+}
