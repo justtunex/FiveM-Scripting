@@ -3,16 +3,99 @@
     margin: 0;
 }
 
+@font-face {
+    font-family: GoldMan;
+    src: url(fonts/FontsFree-Net-Goldman-Bold.ttf);
+}
+
+body {
+    background-color: grey;
+}
+
 .container {
     position: absolute;
     width: 120rem;
     height: 67.5rem;
-    background-color: black;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .topcontent {
     width: 116rem;
     height: 4.8125rem;
     flex-shrink: 0;
-    background-color: red;
+    display: flex;
+    gap: 37.88rem;
+
+}
+
+.topcontent .timecontainer {
+    display: flex;
+    gap: 0.37rem;
+    width: 8.625rem;
+    height: 1.0625rem;
+    flex-shrink: 0;
+}
+
+.topcontent .timecontainer .date #time {
+    width: 2.9375rem;
+    color: #FFF;
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.25);
+    font-family: Goldman;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.topcontent .timecontainer .date #date {
+    width: 3.375rem;
+    color: rgba(255, 255, 255, 0.60);
+    font-family: Goldman;
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.topcontent .announce {
+    width: 27rem;
+    height: 3.5rem;
+    flex-shrink: 0;
+    display: flex; 
+    flex-direction: column;
+    gap: 1.94rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.topcontent .announce #title {
+    width: 20.9375rem;
+    color: #F00;
+    text-align: center;
+    text-shadow: 0px 0px 12.0600004196167px #F00, 0px 0px 24.1200008392334px #F00;
+    font-family: Goldman;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.topcontent .announce #message {
+    width: 27rem;
+    height: 0.8125rem;
+  
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    overflow-wrap: break-word;
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.25);
+    font-family: Goldman;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
