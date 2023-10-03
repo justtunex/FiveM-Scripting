@@ -16,7 +16,6 @@ body {
     position: absolute;
     width: 120rem;
     height: 67.5rem;
-   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,7 +26,8 @@ body {
     height: 4.8125rem;
     flex-shrink: 0;
     display: flex;
-    gap: 37.88rem;
+    gap: 33.88rem;
+    align-items: center;
 
 }
 
@@ -98,4 +98,46 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.topcontent .topmain {
+    width: 12rem;
+    height: 4.8125rem;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topcontent .topmain .servername {
+    display: flex;
+    width: 12rem;
+    height: 0.875rem;
+    flex-shrink: 0;
+}
+
+.topcontent .topmain .servername #servername {
+    width: 7.625rem;
+    height: 0.875rem;
+    color: #F00;
+    text-align: center;
+    text-shadow: 0px 0px 13.4399995803833px rgba(255, 0, 0, 0.60), 0px 0px 26.8799991607666px rgba(255, 0, 0, 0.60), 0px 0px 94.08000183105469px rgba(255, 0, 0, 0.60), 0px 0px 188.16000366210938px rgba(255, 0, 0, 0.60), 0px 0px 322.55999755859375px rgba(255, 0, 0, 0.60), 0px 0px 564.47998046875px rgba(255, 0, 0, 0.60);
+    font-family: Goldman;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.15rem;
+}
+
+.topcontent .topmain .servername #life {
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0px 0px 13.4399995803833px rgba(255, 255, 255, 0.80), 0px 0px 80px #FFF, 0px 0px 94.08000183105469px rgba(255, 255, 255, 0.80), 0px 0px 188.16000366210938px rgba(255, 255, 255, 0.80), 0px 0px 322.55999755859375px rgba(255, 255, 255, 0.80), 0px 0px 564.47998046875px rgba(255, 255, 255, 0.80);
+    font-family: Goldman;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.15rem;
 }
