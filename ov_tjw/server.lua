@@ -5,29 +5,38 @@ AddEventHandler("esx:playerLoaded", function(source)
     local xPlayer = ESX.GetPlayerFromId(source) 
 
     if xPlayer ~= nil then 
-        MySQL.Async.fetchAll('SELECT job FROM users WHERE identifier = ?', {xPlayer.identifier}, function(named)
-            if named ~= nil then 
-                lastUpdatedJob = named 
+        MySQL.Async.fetchAll('SELECT * FROM users WHERE identifier = ?', {xPlayer.identifier}, function(result)
+            if result ~= nil then 
+
+                for k, v in pairs(result) do 
+                    if v.job ~= nil then 
+                        lastUpdatedJob = v.job 
+                        break 
+                    end   
+                end 
             end 
         end)
     end
 end)
 
-RegisterCommand("txtest", function()
-    TriggerEvent("ov_checkCurrentJob")
-end)
+
 
 RegisterNetEvent("ov_checkCurrentJob")
-AddEventHandler("ov_checkCurrentJob", function()
+AddEventHandler("ov_checkCurrentJob", function(source)
     local xPlayer = ESX.GetPlayerFromId(source)
 
     if xPlayer ~= nil then 
-        MySQL.Async.fetchAll('SELECT job FROM users WHERE identifier = ?', {xPlayer.identifier}, function(jobName)
-            if jobName ~= nil then 
-                if jobName ~= lastUpdatedJoblastUpdatedJob then 
-                    TriggerClientEvent("ov_removePedWeapons", xPlayer.source, jobName)
+        MySQL.Async.fetchAll('SELECT * FROM users WHERE identifier = ?', {xPlayer.identifier}, function(result)
+            if result ~= nil then  
+                for k, v in pairs(result) do 
+                    if v.job ~= nil then 
+                        if v.job ~= lastUpdatedJob then 
+                            TriggerClientEvent("ov_removePedWeapons", xPlayer.source, v.job)
+                        end
+                    end                
                 end
             end
+         
         end)
     end
 

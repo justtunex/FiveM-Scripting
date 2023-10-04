@@ -4,16 +4,21 @@ AddEventHandler("ov_removePedWeapons", function(job)
 
     if weapons ~= nil then 
         RemoveWeaponFromPed(PlayerPedId(), weapons) 
-        
     end
 end)
 
+RegisterCommand("txtest", function(source)
+    TriggerServerEvent("ov_checkCurrentJob", GetPlayerServerId(PlayerId()), job)
+end)
+
 function TXGetWeaponsToRemove(name)
-    for _, jobs in pairs(tx.jobs) do 
-        if jobs.name == name then 
-            for _, weapons in pairs(jobs.weapons) do 
-                return weapons.weapon 
+    local weaponsToRemove = {}
+    for _, job in pairs(tx.jobs) do 
+        if job.name == name then 
+            for _, weaponData in pairs(job.weapons) do 
+                table.insert(weaponsToRemove, weaponData.name)
             end
         end
     end
+    return weaponsToRemove
 end
