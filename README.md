@@ -19,7 +19,7 @@ Falls du Ideen oder Vorschläge für neue Projekte hast, oder wenn du an einem m
 ## Kontakt
 
 - Email: berishanaim555@icloud.com
-- Dicord tunex.
+- Discord tunex.
 
 Ich freue mich über dein Interesse an meinen Langeweile-Projekten!
 
